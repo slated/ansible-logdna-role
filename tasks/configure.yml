@@ -1,6 +1,5 @@
 ---
 
-# Configuring LogDNA Agent:
 - name: Setting LogDNA Ingestion Key
   become: true
   become_method: sudo

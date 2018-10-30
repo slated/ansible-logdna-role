@@ -1,9 +1,10 @@
 ---
-- name: Converge
+- name: LogDNA
   hosts: all
   vars:
     logdna_api_key: abcedef
-    agent_install: true
-    agent_config: true
+    logdna_agent_install: true
+    logdna_conf_logdir: '/root'
+
   roles:
     - role: ansible-logdna-role

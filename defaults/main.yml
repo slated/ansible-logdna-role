@@ -12,4 +12,3 @@ logdna_conf_tags: ""
 
 ## Agent State:
 logdna_agent_install: false
-logdna_gent_config: false

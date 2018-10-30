@@ -1,6 +1,5 @@
 ---
 
-# Installation:
 - name: LogDNA Agent Package Public Key
   apt_key:
     url: http://repo.logdna.com/logdna.gpg

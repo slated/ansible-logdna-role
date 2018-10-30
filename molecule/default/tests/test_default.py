@@ -9,3 +9,8 @@ testinfra_hosts = testinfra.utils.ansible_runner.AnsibleRunner(
 def test_logdna_agent_is_existed(host):
     logdna_agent = host.file("/usr/bin/logdna-agent")
     assert logdna_agent.exists
+
+
+def test_logdna_config_is_existed(host):
+    logdna_config = host.file("/etc/logdna.conf")
+    assert logdna_config.exists
