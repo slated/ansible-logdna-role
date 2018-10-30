@@ -1,0 +1,33 @@
+---
+galaxy_info:
+  author: Thien Ho
+  description: Ansible Galaxy Role to install and configure LogDNA Agent
+  company: Slated
+  license: MIT
+  min_ansible_version: 2.1
+
+  platforms:
+    - name: Debian
+      versions:
+        - jessie
+    - name: EL
+      versions:
+        - 6
+        - 7
+    - name: Ubuntu
+      versions:
+        - precise
+        - trusty
+        - xenial
+        - artful
+
+  cloud_platforms: []
+
+  galaxy_tags:
+    - logging
+    - logdna
+    - installer
+    - role
+    - agent
+
+dependencies: []

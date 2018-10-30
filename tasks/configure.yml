@@ -1,0 +1,51 @@
+---
+
+# Configuring LogDNA Agent:
+- name: Setting LogDNA Ingestion Key
+  become: true
+  become_method: sudo
+  command: "logdna-agent --key {{ logdna_api_key }}"
+  when: logdna_api_key != ""
+  run_once: true
+
+- name: Using Alternate Config File
+  become: true
+  become_method: sudo
+  command: "logdna-agent --config {{ logdna_conf_config }}"
+  when: logdna_conf_config != ""
+
+- name: Adding Log Directories
+  become: true
+  become_method: sudo
+  command: "logdna-agent --logdir {{ logdna_conf_logdir }}"
+  when: logdna_conf_logdir != ""
+
+- name: Adding Log Files
+  become: true
+  become_method: sudo
+  command: "logdna-agent --logfile {{ logdna_conf_logfile }}"
+  when: logdna_conf_logfile != ""
+
+- name: Excluding Files from Log Directories
+  become: true
+  become_method: sudo
+  command: "logdna-agent --exclude {{ logdna_conf_exclude }}"
+  when: logdna_conf_exclude != ""
+
+- name: Filtering Out Lines Matching Pattern
+  become: true
+  become_method: sudo
+  command: "logdna-agent --exclude-regex {{ logdna_conf_exclude_regex }}"
+  when: logdna_conf_exclude_regex != ""
+
+- name: Using Alternate Hostname
+  become: true
+  become_method: sudo
+  command: "logdna-agent --hostname {{ logdna_conf_hostname }}"
+  when: logdna_conf_hostname != ""
+
+- name: Setting Tags for This Host
+  become: true
+  become_method: sudo
+  command: "logdna-agent --tags {{ logdna_conf_tags }}"
+  when: logdna_conf_tags != ""

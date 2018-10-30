@@ -1,0 +1,9 @@
+---
+
+- name: Start LogDNA agent
+  become: true
+  become_method: sudo
+  service:
+    name: logdna-agent
+    enabled: true
+    state: started

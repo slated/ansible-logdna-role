@@ -1,0 +1,16 @@
+---
+
+# Installation:
+- include_tasks: build.yml
+  when: agent_install
+  tags: [logdna]
+
+# Configuration:
+- include_tasks: configure.yml
+  when: agent_config
+  tags: [logdna]
+
+# Servicing:
+- include_tasks: service.yml
+  when: agent_install
+  tags: [logdna]

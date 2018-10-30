@@ -1,0 +1,15 @@
+---
+
+## Configuration:
+logdna_api_key: ""
+logdna_conf_config: ""
+logdna_conf_logdir: ""
+logdna_conf_logfile: ""
+logdna_conf_exclude: ""
+logdna_conf_exclude_regex: ""
+logdna_conf_hostname: ""
+logdna_conf_tags: ""
+
+## Agent State:
+logdna_agent_install: false
+logdna_gent_config: false
