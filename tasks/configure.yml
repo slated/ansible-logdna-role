@@ -5,7 +5,6 @@
   become_method: sudo
   command: "logdna-agent --key {{ logdna_api_key }}"
   when: logdna_api_key != ""
-  run_once: true
 
 - name: Using Alternate Config File
   become: true
