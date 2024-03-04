@@ -1,21 +1,20 @@
 ---
-
 - name: LogDNA Agent Package Public Key
   become: true
   become_method: sudo
   apt_key:
-    url: http://repo.logdna.com/logdna.gpg
+    url: https://assets.logdna.com/logdna.gpg
 
 - name: LogDNA Agent Repository
   become: true
   become_method: sudo
   apt_repository:
-    repo: deb http://repo.logdna.com stable main
+    repo: deb https://assets.logdna.com stable main
 
 - name: Install LogDNA Agent
   become: true
   become_method: sudo
   apt:
-    state: present
+    state: latest
     name: logdna-agent
     update_cache: true
